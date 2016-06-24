@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -43,7 +44,11 @@ public class ActivationActivity extends AppCompatActivity {
         Log.d("INFO", "Biggen Logo");
     }
 
-    public boolean onKeyDown(int keyCode, keyEvent event) {
-
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if((keyCode == KeyEvent.KEYCODE_BACK)) {
+            Log.d(this.getClass().getName(), "back button pressed");
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
