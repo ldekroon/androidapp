@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ActivationActivity">
+
+    <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="5"
+        android:id="@+id/txtAct1"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:onClick="small_Logo" />
+
+    <EditText
+        android:id="@+id/txtAct2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="5"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+        <!--android:layout_alignParentTop="true"-->
+        android:layout_alignEnd="@+id/gridView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="5"
+        android:id="@+id/txtAct3"
+        android:layout_alignTop="@+id/txtAct2"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Enter Activation Code Below"
+        android:layout_above="@+id/txtAct1"
+        android:layout_marginBottom="27dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:singleLine="false"
+        android:textColor="#164273" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activate"
+        android:id="@+id/btnActivate"
+        android:layout_below="@+id/txtAct2"
+        android:layout_alignEnd="@+id/gridView" />
+
+    <TextView
+        android:id="@+id/txtActHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+
+        android:text="@string/act_help"
+        android:autoLink="web"
+        android:onClick="open_help"
+
+        android:layout_alignBottom="@+id/btnActivate"
+        android:layout_alignTop="@+id/btnActivate"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/txtAct2"
+        android:textColor="#164273"
+        android:textColorLink="#2d85e7"
+        android:linksClickable="false"
+        android:singleLine="false" />
+
+    <ImageView
+        android:id="@+id/imgLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/clear192"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
